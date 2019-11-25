@@ -4,7 +4,7 @@ import requests
 
 
 def __main__():
-    base = ['http://ux.getuploader.com/e2339999zp/', 'http://ux.getuploader.com/e2337650/', 'http://ux.getuploader.com/toukyuutoyoko9000/', 'http://ux.getuploader.com/e2351000/']
+    base = ['https://ux.getuploader.com/e2339999zp/', 'https://ux.getuploader.com/e2337650/', 'https://ux.getuploader.com/toukyuutoyoko9000/', 'https://ux.getuploader.com/e2351000/']
     headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'}
     all_links = []
 
