@@ -1,12 +1,14 @@
 import codecs
 from bs4 import BeautifulSoup as bs
 import requests
+import cfscrape
 
 
 def __main__():
     base = ['https://ux.getuploader.com/e2339999zp/', 'https://ux.getuploader.com/e2337650/', 'https://ux.getuploader.com/toukyuutoyoko9000/', 'https://ux.getuploader.com/e2351000/']
     headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'}
     all_links = []
+    scraper = cfscrape.create_scraper()
 
     for b in base:
         print('===== SCRAPING BASE PAGE =====', b)
@@ -15,7 +17,7 @@ def __main__():
             print('=== Sub Scrape ===', url)
             base_done = False
             try:
-                r = requests.get(url, headers=headers)
+                r = scraper.get(url, headers=headers)
                 html = r.content
                 soup = bs(html,'html.parser')
                 rows = soup.find_all('table', class_='table table-small-font table-hover')[0].find_all('tr')[1:]
