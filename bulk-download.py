@@ -29,7 +29,7 @@ def __main__():
         with open(PROGRESS_FILE, 'r') as f:
             completed.append(f.read().split('\n'))
 
-        filejString = []
+    filejString = []
     if os.path.exists('list/JPOP.txt'):
         with open('list/JPOP.txt', 'r', encoding = 'utf8') as j:
             filejString.append(j.read().split('\n'))
@@ -86,7 +86,7 @@ def __main__():
     headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'}
     with open('links.csv', encoding = 'utf8') as flinks:
         for line in flinks:
-            title, comment, downloads, size_mb, url = line.split('|')
+            title, comment, downloads, size_mb, url = line.strip().split('|')
             print('Processing:', title, url, comment, downloads)
             # If the file has been downloaded before, skip it
             if line in completed:
