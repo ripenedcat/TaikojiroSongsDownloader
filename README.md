@@ -6,10 +6,15 @@ Fan-made songs Not included.
 ---
 
 1.运行scrape.py爬取所有的下载链接
+
 2.运行bulk-download.py,将所有的歌曲zip包下载到./下
+
 3.运行sort-song.py进行分类
+
 4.运行unzip-songs解压
+
 5.运行duplicate-song-with-tjas将多个tja拆分为两个目录
+
 
 ---
 ### Songs need password and cannot be downloaded
